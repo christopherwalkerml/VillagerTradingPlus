@@ -1,0 +1,28 @@
+name: VillagerTradingPlus
+version: 1.1.2
+author: Darkolythe
+main: me.darkolythe.villagertradingplus.VillagerTradingPlus
+api-version: 1.13
+description: This plugin allows the customization of a villager's trades, and allows upgrades on prices
+
+commands:
+  villagertradingplus:
+    usage: /<command> [reload]
+    aliases: [vtp]
+    description: reloads the config
+    permission: villagertradingplus.reload
+    permission-message: You do not have permission!
+
+permissions:
+  villagertradingplus.use:
+    description: Allows the use of villagertradingplus features
+    default: true
+  villagertradingplus.reload:
+    description: Reloads the villagertradingplus config
+    default: op
+  villagertradingplus.*:
+    description: Wildcard permission
+    default: op
+    children:
+      villagertradingplus.use: true
+      villagertradingplus.reload: true

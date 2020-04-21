@@ -1,0 +1,26 @@
+#StackType is either SHULKER, STACK, or ITEM. You have to give the villager a whole SHULKER,
+#STACK or singular ITEM of the same exact type to create a trade
+stacktype: STACK
+
+#noitemshulker is set to true, because when using the ITEM stacktype, shulker can be easily exploited
+#to dupe items. if you want to get shulkers, just use shulker shells
+noitemshulker: true
+
+#This is what items to blacklist from being able to set as a VillagerPlus trade. This can reduce duping attempts
+blacklist: DIAMOND,DIAMOND_BLOCK,EMERALD,EMERALD_BLOCK
+
+#This is the item type required to purchase the trade item. (Default for villager is emeralds in game)
+tradetype: EMERALD
+
+#When initially creating a VillagerPlus trade, this will be the random price range for the trade.
+#The smallest value is also the minimum trade price when upgrading
+traderange: 5,20
+
+#If a VillagerPlus villager already has a trade, if you give them the requirements a second time
+#(the item must be the exact same) then the trade price will decrease by this amount
+upgraderange: 1,5
+
+#This is the amount of trades required for the villager to downgrade the trade price.
+#Say it costs 10 emeralds for 64 stone, and I buy that 1000 times, for the next 1000 trades,
+#it will be 10 + (random upgraderange) emeralds, and so on and so forth
+tradedowngrade: 1000
